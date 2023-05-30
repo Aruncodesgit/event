@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +24,6 @@
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.12",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "request": "^2.88.2", 
-    "wbm": "^1.1.16"
+    "passport-local": "^1.0.0" 
   }
 }
