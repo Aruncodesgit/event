@@ -6,7 +6,7 @@ const passport = require('passport');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const path = require('path')
  
 
 const rtsIndex = require('./routes/index.router');
@@ -40,6 +40,12 @@ app.use((err, req, res, next) => {
         console.log(err);
     }
 });
+
+app.use(express.static(path.join(__dirname, './front-end/dist')))
+
+app.get('*', function(req, res){
+    res.sendFile(path.join(__dirname, './front-end/dist/index.html'))
+})
 
 const PORT = process.env.PORT || 3000
 // start server
