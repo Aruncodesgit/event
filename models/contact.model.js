@@ -15,7 +15,11 @@ var contactSchema = new mongoose.Schema({
     }, 
     message: {
         type: String
-    } 
+    } ,
+    date : {
+        type: Date,
+        default: Date.now()
+    },
 });
 
 mongoose.model('Contact', contactSchema);

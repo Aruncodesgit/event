@@ -13,7 +13,11 @@ var  callSchema = new mongoose.Schema({
     phone_plus_service :{
         type: String,
         unique:true
-    }
+    },
+    date : {
+        type: Date,
+        default: Date.now()
+    },
 });
 
 mongoose.model('CallBack', callSchema);
