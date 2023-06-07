@@ -11,6 +11,7 @@ module.exports.contact = (req, res, next) => {
     contact.phone = req.body.phone;   
     contact.subject = req.body.subject;  
     contact.message = req.body.message;  
+    contact.status = req.body.status;
     contact.save((err, doc) => {
         if (!err){
             res.send(doc);

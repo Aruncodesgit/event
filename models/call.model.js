@@ -14,6 +14,9 @@ var  callSchema = new mongoose.Schema({
         type: String,
         unique:true
     },
+    status : {
+        type: String
+    },
     date : {
         type: Date,
         default: Date.now()

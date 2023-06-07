@@ -9,6 +9,7 @@ module.exports.callback = (req, res, next) => {
     callback.name = req.body.name; 
     callback.phone = req.body.phone;   
     callback.service = req.body.service; 
+    contact.status = req.body.status;
     callback.phone_plus_service = callback.phone + req.body.service; 
       
     callback.save((err, doc) => {
