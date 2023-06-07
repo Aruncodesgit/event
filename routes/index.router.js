@@ -24,6 +24,8 @@ const upload = multer({ storage: storage });
 router.post('/contact', ctrlContact.contact); 
 router.get('/contactDetails', ctrlContact.contactDetails);  
 router.delete('/contact/:id', ctrlContact.contactDelete);
+router.put('/contact/:id', ctrlContact.updateStatus);
+router.get('/contactDetails/:id', ctrlContact.contactDetailsById);
 
 router.post('/gallery', upload.single("avatar"), ctrlGallery.gallery); 
 router.get('/galleryDetails', ctrlGallery.galleryDetails); 
