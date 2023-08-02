@@ -11,6 +11,5 @@ mongoose.connect(process.env.MONGODB_URI, (err) => {
 });
 
 
-require('./contact.model'); 
-require('./gallery.model'); 
+require('./contact.model');  
 require('./call.model'); 
